@@ -1,130 +1,152 @@
-# Exercícios
+# Objetos
+A seguir, você vai aprender sobre <b>objetos, for/in, for/of</b> e <b></b>funções</b>.
 
-## Parte I - Objetos e For/In
-
-* Usando o objeto abaixo, faça os exercícios a seguir:
-
-```javascript
-let info = {
-  personagem: "Margarida",
-  origem: "Pato Donald",
-  nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
-};
-```
-
-1. Imprima no console uma mensagem de boas-vindas para a personagem acima, incluindo seu nome.
-  * Valor esperado no console: Bem-vinda, Margarida
-
-2. Insira no objeto uma nova propriedade com o nome de chave "recorrente" e o valor "Sim" e, em seguida, imprima o objeto no console.
-  * Valor esperado no console:
+Você já aprendeu que as <b>variáveis</b> em JavaScript são recipientes ou containers para os dados. Por exemplo:
 
 ```javascript
-{
-  personagem: 'Margarida',
-  origem: 'Pato Donald',
-  nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
-  recorrente: 'Sim'
+let car = 'Fiat';
+```
+Agora é hora de aprender sobre objetos!
+
+Um objeto em JavaScript é uma entidade independente, com propriedades e tipos. Uma propriedade é a associação entre uma chave e um valor, são essas as características do objeto.
+
+Pense em um objeto da vida real, um carro, por exemplo. Cada carro tem sua cor, peso, tamanho, quantidade de portas e etc. Essas são suas características, suas propriedades. E, da mesma forma que funciona um objeto da vida real, funcionam os objetos em JavaScript.
+
+Objetos são estruturas ou coleções compostas por pares chave-valor. Também é possível armazenar um objeto dentro de outro, ou até mesmo dentro de um array.
+
+```javascript
+let car = {
+  type: 'Fiat',
+  model: '500',
+  color: 'white',
 };
 ```
+Para acessar as chaves dentro de um objeto, temos duas formas:
 
-3. Faça um for/in que mostre todas as chaves do objeto.
-  * Valor esperado no console:
+- notação de ponto: car.type
+- notação de colchetes: car[type]
 
+Se o objeto está dentro de um array, ele é acessado através do seu índice, da mesma forma que se acessaria uma informação num array de strings. As chaves de um objeto são armazenadas como strings e, para conseguir acessar propriedades nomeadas com números, como 0, por exemplo, só é possível usando a <b>notação de colchetes</b>. Se você usar a <b>notação de ponto</b>, um erro será retornado. Ao usar a <b>notação de colchetes</b> também é possível chamar variáveis que fazem relação com a chave que você quer acessar dentro desses colchetes.
+# 
+# For/in e for/of
+
+o for/in percorre as propriedades dos objetos que forem enumeráveis com base na ordem de inserção, e não nos valores das propriedades, ou seja, nos retorna o índice.
+
+O for/of tem uma aplicação bastante parecida com o que vimos agora no for/in, mas com uma diferença crucial.
+```javascript
+let food = ['hamburguer', 'bife', 'acarajé'];
 ```
-personagem
-origem
-nota
-recorrente
+As propriedades dos elementos do array serão os índices de cada posição, começando por zero. É por isso que os números retornados pelo console.log são 0, 1 e 2: as propriedades que correspondem ao índice de cada posição do array.
+
+```javascript
+for (let position in food) {
+  console.log(position);
+};
+//resultado: 0, 1, 2;
 ```
+Se percorrermos um objeto, também teremos o mesmo resultado. O for/in irá percorrer a propriedade declarada, e não o seu valor em si.
 
-4. Faça um novo for/in, mas agora mostre todos os valores das chaves do objeto.
-  * Valor esperado no console:
+Já o for/of percorre os elementos dos objetos iteráveis através dos seus respectivos valores, e não dos índices como o for/in. Vejamos o exemplo:
 
+```javascript
+let food = ['hamburguer', 'bife', 'acarajé'];
+for (let value of food) {
+  console.log(value);
+};
+//resultado: hamburguer, bife, acarajé;
 ```
-Margarida
-Pato Donald
-Namorada do personagem principal nos quadrinhos do Pato Donald
-Sim
+# Funções
+É comum, no começo da carreira de uma pessoa programadora, a escrita de programas muito extensos, repetitivos e confusos de se entender. Nesse caso, é recomendada a utilização das funções como forma de deixar seu algoritmo mais simples, legível e enxuto.
+
+Mas o que é uma função, exatamente? Segundo o MDN, função é um conjunto de instruções que executa uma tarefa ou calcula um valor.
+
+Funções são a forma mais essencial de organização de código e de lógica na programação; usando-as, você consegue dividir seu código em blocos lógicos e deixar as coisas mais organizadas.
+
+Com isso, é possível diminuir o tamanho do seu código, acabar com a repetição e tornar mais fáceis a leitura e o entendimento, pois a lógica do programa estará muito bem dividida.
+
+é possível criar funções que recebem ou não parâmetros. E, para decidir se a sua função precisa ou não deles, você deve pensar em sua lógica.
+
+Por exemplo, se a função tiver o objetivo de cumprimentar a pessoa que está executando o programa pelo nome, tal como: “Bom dia, João!”, ela vai precisar receber o nome da pessoa como parâmetro. Porém, se ela foi desenvolvida apenas para dar “Bom dia!”, um parâmetro não é necessário.
+
+Veja o exemplo abaixo:
+
+```javascript
+
+// Sem função
+let nome = 'João';
+
+console.log('Bom dia, ' + nome);
 ```
+```javascript
 
-5. Agora, defina um segundo objeto com a mesma estrutura (as mesmas chaves) do primeiro e os seguintes valores: "Tio Patinhas", "Christmas on Bear Mountain, Dell's Four Color Comics #178", "O último MacPatinhas", "Sim".
-  * Valor esperado no console:
+// Com função
+function bomDiaTryber(nome) {
+  console.log('Bom dia, ' + nome);
+}
 
+bomDiaTryber('João'); // Bom dia, João
+bomDiaTryber('Julia'); // Bom dia, Julia
+bomDiaTryber('Marcelo'); // Bom dia, Marcelo
 ```
-Margarida e Tio Patinhas
-Pato Donald e Christmas on Bear Mountain, Dell's Four Color Comics #178
-Namorada do personagem principal nos quadrinhos do Pato Donald e O último MacPatinhas
-Ambos recorrentes // Atenção para essa última linha!
+Com base nesse exemplo, se você optasse por não usar função e precisasse dar bom dia para pessoas diferentes várias vezes durante o código, teria que estar sempre mudando o valor da variável nome e sempre escrevendo a mesma mensagem, o que pode acabar gerando erros de digitação e causar erros na sua aplicação.
+
+Veja dois exemplos de funções sem parâmetros:
+
+```javascript
+function bomDia() {
+  return 'Bom dia!';
+}
+
+console.log(bomDia()); // Bom dia!
 ```
+```javascript
+let status = 'deslogado';
 
-## Parte II - Funções
+function logarDeslogar() {
+  if (status === 'deslogado') {
+    status = 'logado';
+  } else {
+    status = 'deslogado';
+  }
+}
 
-* Agora vamos fazer um exercício que vai deixar claro como funções com responsabilidades bem definidas deixam o código mais bem escrito.
+console.log(status); // deslogado
 
-1. Crie uma função que receba uma string e retorne true se for um palíndromo, ou false, se não for.
-  * Exemplo de palíndromo: arara.
-  * verificaPalindrome("arara");
-  * Retorno esperado: true
-  * verificaPalindrome("desenvolvimento");
-  * Retorno esperado: false
+logarDeslogar();
+console.log(status); // logado
 
-2. Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
-  * Array de teste: [2, 3, 6, 7, 10, 1];.
-  * Valor esperado no retorno da função: 4.
+logarDeslogar();
+console.log(status); // deslogado
 
-3. Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
-  * Array de teste: [2, 4, 6, 7, 10, 0, -3];.
-  * Valor esperado no retorno da função: 6.
+console.log('O usuário está ' + status); // O usuário está deslogado
+```
+E agora, exemplos de funções usando parâmetros:
 
-4. Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
-  * Array de teste: ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];.
-  * alor esperado no retorno da função: Fernanda.
+```javascript
+// Com função
+function soma(a, b) {
+  return a + b;
+}
 
-5. Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
-  * Array de teste: [2, 3, 2, 5, 8, 2, 3];.
-  * Valor esperado no retorno da função: 2.
+console.log(soma(5, 2)); // 7
+```
+```javascript
+function maiorNum(primeiroNum, segundoNum) {
+  if (primeiroNum > segundoNum) {
+    return primeiroNum + ' é maior que ' + segundoNum;
+  } else if (segundoNum > primeiroNum) {
+    return segundoNum + ' é maior que ' + primeiroNum;
+  } else {
+    return 'Os números são iguais';
+  }
+}
 
-6. Crie uma função que receba um número inteiro N e retorne o somatório de todos os números de 1 até N.
-  * Valor de teste: N = 5.
-  * Valor esperado no retorno da função: 1+2+3+4+5 = 15.
+console.log(maiorNum(10, 20)); // 20 é maior que 10
+console.log(maiorNum(2, -5)); // 2 é maior que -5
+console.log(maiorNum(1, 1)); // Os números são iguais
+```
+Ah, se lembra da complexidade de código? Surpresa! É comum esse erro aparecer enquanto você escreve suas primeiras funções, não se assuste! O que você precisa fazer é quebrá-las em partes menores ou até mesmo criar subfunções que podem ser chamadas dentro dessas funções. Existem tecnologias que apontam esses erros de complexidade no seu terminal, como o ESLint, por exemplo.
 
-7. Crie uma função que receba uma string word e outra string ending. Verifique se a string ending é o final da string word. Considere que a string ending sempre será menor que a string word.
-  * Valor de teste: "trybe" e "be"
-  * Valor esperado no retorno da função: true
-  * verificaFimPalavra("trybe", "be");
-  * Retorno esperado: true
-  * verificaFimPalavra("joaofernando", "fernan");
-  * Retorno esperado: false
+Essa tarefa fica mais fácil quando você entende que cada função deve ter apenas um propósito. Evite criar uma função que faça várias coisas diferentes e que não tenham ligação uma com a outra! Não é recomendável que uma função tenha muitas finalidades, como dizer “oi”, multiplicar dois números e dizer qual é a estação do ano. É melhor você dividir isso tudo em 3 funções diferentes, pois, além de diminuir a complexidade, fica melhor para entender e usá-las em outras partes do código.
 
-## Bônus
-
-1. (Difícil) Faça um programa que receba uma string em algarismos romanos e retorne o número que a string representa.
-  * Atenção! Esse exercício já apareceu no processo seletivo de uma grande multinacional!
-  * Dicas:
-    * Uma string é um array de caracteres, então cada elemento do array é uma letra.
-    * O valor de cada numeral romano é:
-
-    ```
-         | I   | 1    |
-     | --- | ---- |
-     | IV  | 4    |
-     | V   | 5    |
-     | IX  | 9    |
-     | X   | 10   |
-     | XL  | 40   |
-     | L   | 50   |
-     | XC  | 90   |
-     | C   | 100  |
-     | CD  | 400  |
-     | D   | 500  |
-     | CM  | 900  |
-     | M   | 1000 |
-    ```
-
-    * Que tal criar um objeto que associe cada letra a um numeral para fácil consulta?
-    * **Atenção! Quando você tem um número pequeno à direita de um número grande, eles devem ser somados. Exemplo: XI = 10 + 1 = 11. No entanto, se o número pequeno está à esquerda de um número maior que ele, ele deve ser subtraído. Exemplo: IX = 10 - 1 = 9.**
-
-2. Para o próximo exercício você irá precisar ter uma conta no CodeWars, para entender como fazê-lo acesse esse o conteúdo que fizemos sobre isso. Após seguir os passos para registro acesse o desafio proposto e então clique em TRAIN, você então será redirecionado para a página onde o desafio deve ser feito. Quando tiver finalizado o exercício clique em TEST para verificar, com testes simples, se sua solução satisfaz o que foi pedido. Passando nesses testes clique em ATTEMPT, ao fazer isso seu código passará por todos os testes existentes para validação da solução. Caso sua solução esteja correta o botão SUBMIT ficará disponível, clique nele para submeter sua resposta, caso contrário volte ao seu código e veja o que ainda não está satisfazendo o que se é pedido, repita esse processo até que sua solução esteja correta.
-  * Desafio - 16 + 8 = 214;
-  * Esse desafio irá exigir um pouco de conhecimento sobre alguns métodos do JavaScript, para isso pesquise quando for necessário e caso surja alguma dúvida peça ajuda no Slack. Dúvidas em como fazer uma boa pesquisa? Sem problemas! Acesse esse conteúdo sobre como pesquisar como uma pessoa desenvolvedora.
-
+Achou complicado? Calma, no começo é normal essa confusão e você pode não entender a vantagem do uso de funções. Mas, conforme você avançar no curso, as funções serão suas melhores amigas. Não fique com medo, elas servem para te ajudar e deixar sua trajetória como pessoa programadora um pouco mais fácil!
