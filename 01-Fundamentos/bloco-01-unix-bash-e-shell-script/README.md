@@ -86,10 +86,11 @@ Por isso, mesmo que você não seja um desenvolvedor e, eventualmente, procure p
 Uma vez criado, o script Bash pode ser executado inúmeras vezes por qualquer usuário, mas a sintaxe do Bash considera elementos e ações bem específicas, por exemplo, o usuário não pode acionar o “enter” no teclado antes de terminar o script, mas têm semelhanças com outras linguagens, como o uso do ponto e vírgula para encerrar uma linha de comando. Além disso, é necessário declarar de forma explícita a pontuação, embora não seja usual declarar as variáveis, mas atribuir valores para elas.
 
 O usuário consegue atribuir qualquer valor para uma variável, desde textos e números até uma saída de comando. Entretanto, todo esse valor deve ser precedido pelo símbolo $ e redigido com a primeira letra em caixa alta, o que não é exigido dos scripts, que são escritos com letras minúsculas. Veja um exemplo de comando em Bash a seguir:
-
+```
 #!/bin/bash
 testfunction(){
 echo "Hello Word"
 }
 testfunction
+```
 Os scripts bash são usados para executar um comando shell, seja individual, seja em grupo, para personalizar rotinas e automatizar tarefas. Por isso, conhecer a programação bash é importante para os usuários do Linux, mas também para qualquer desenvolvedor ou gestor que monitora e controla infraestruturas de TI ou bancos de dados.
