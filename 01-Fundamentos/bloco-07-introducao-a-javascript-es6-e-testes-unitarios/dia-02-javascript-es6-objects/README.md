@@ -1,17 +1,16 @@
 # Exercícios
 
 ## Parte I
-
 Para os exercícios a seguir, use o seguinte código.
 
 ```javascript
 const order = {
-  name: "Rafael Andrade",
-  phoneNumber: "11-98763-1416",
+  name: 'Rafael Andrade',
+  phoneNumber: '11-98763-1416',
   address: {
-    street: "Rua das Flores",
-    number: "389",
-    apartment: "701",
+    street: 'Rua das Flores',
+    number: '389',
+    apartment: '701',
   },
   order: {
     pizza: {
@@ -22,19 +21,19 @@ const order = {
       pepperoni: {
         amount: 1,
         price: 20,
-      },
+      }
     },
     drinks: {
       coke: {
-        type: "Coca-Cola Zero",
+        type: 'Coca-Cola Zero',
         price: 10,
         amount: 1,
-      },
+      }
     },
     delivery: {
-      deliveryPerson: "Ana Silveira",
+      deliveryPerson: 'Ana Silveira',
       price: 5,
-    },
+    }
   },
   payment: {
     total: 60,
@@ -43,13 +42,15 @@ const order = {
 
 const customerInfo = (order) => {
   // Adicione abaixo as informações necessárias.
-};
+
+}
 
 customerInfo(order);
 
 const orderModifier = (order) => {
   // Adicione abaixo as informações necessárias.
-};
+
+}
 
 orderModifier(order);
 ```
@@ -58,13 +59,13 @@ Agora você vai fazer alguns exercícios de fixação.
 
 1. Complete a função customerInfo() para que seu retorno seja similar a "Olá Ana Silveira, entrega para: Rafael Andrade, Telefone: 11-98763-1416, R. Rua das Flores, Nº: 389, AP: 701".
 
-- Note que o parâmetro da função já está sendo passado na chamada da função.
+* Note que o parâmetro da função já está sendo passado na chamada da função.
 
 2. Complete a função orderModifier() para que seu retorno seja similar a "Olá Luiz Silva, o total do seu pedido de muzzarella, calabresa e Coca-Cola Zero é R$ 50,00."
 
-- Modifique o nome da pessoa compradora.
+* Modifique o nome da pessoa compradora.
 
-- Modifique o valor total da compra para R$ 50,00.
+* Modifique o valor total da compra para R$ 50,00.
 
 ## Parte II
 
@@ -72,23 +73,23 @@ Para os exercícios a seguir, use o seguinte código.
 
 ```javascript
 const lesson1 = {
-  materia: "Matemática",
+  materia: 'Matemática',
   numeroEstudantes: 20,
-  professor: "Maria Clara",
-  turno: "manhã",
+  professor: 'Maria Clara',
+  turno: 'manhã',
 };
 
 const lesson2 = {
-  materia: "História",
+  materia: 'História',
   numeroEstudantes: 20,
-  professor: "Carlos",
+  professor: 'Carlos',
 };
 
 const lesson3 = {
-  materia: "Matemática",
+  materia: 'Matemática',
   numeroEstudantes: 10,
-  professor: "Maria Clara",
-  turno: "noite",
+  professor: 'Maria Clara',
+  turno: 'noite',
 };
 ```
 
@@ -137,9 +138,9 @@ console.log(getValueByNumber(lesson1, 0));
 8. Crie uma função que verifique se o par (chave / valor) existe na função. Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave. Exemplo:
 
 ```javascript
-console.log(verifyPair(lesson3, "turno", "noite"));
+console.log(verifyPair(lesson3, 'turno', 'noite'));
 // Output: true,
-console.log(verifyPair(lesson3, "materia", "Maria Clara"));
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
 // Output: false
 ```
 
@@ -150,7 +151,7 @@ console.log(verifyPair(lesson3, "materia", "Maria Clara"));
 2. Crie uma função que deverá retornar um objeto que representa o relatório do professor ou professora, as aulas que ele ou ela ministrou e o número total de estudantes. Use o objeto criado no exercício 5:
 
 ```javascript
-console.log(createReport(allLessons, "Maria Clara"));
+console.log(createReport(allLessons, 'Maria Clara'))
 /* {
   professor: 'Maria Clara',
   aulas: [ 'Matemática', 'Matemática' ],

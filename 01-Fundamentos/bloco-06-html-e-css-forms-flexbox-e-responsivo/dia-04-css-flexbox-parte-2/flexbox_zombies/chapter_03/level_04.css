@@ -1,5 +1,5 @@
 crossbow {
   display: flex;
   flex-direction: column-reverse;
-  align-items: flex-start;
+  align-items: flex-start; 
 }

@@ -62,8 +62,7 @@ body {
   color: orangered;
 }
 
-h1,
-h2 {
+h1, h2 {
   margin-bottom: 20px;
 }
 
@@ -71,7 +70,7 @@ h2 {
   left: 0px !important;
 }
 
-#texto {
+#texto{
   padding: 40px;
   min-height: 100vh;
   min-width: 100vw;
@@ -86,3 +85,4 @@ h2 {
   background-color: orangered;
   color: white;
 }
+

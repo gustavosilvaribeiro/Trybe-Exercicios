@@ -45,7 +45,7 @@
 #content-container {
   float: left;
   width: 100%;
-  background: #fff;
+  background: #FFF;
 }
 
 #content {
@@ -82,9 +82,7 @@
 }
 
 @media only print {
-  #header,
-  #navigation,
-  #footer {
+  #header, #navigation, #footer {
     display: none;
   }
 
@@ -99,7 +97,7 @@
 
 @media screen and (max-width: 750px) {
   #container {
-    padding-top: 80px;
+    padding-top: 80px; 
   }
 
   #header {

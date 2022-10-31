@@ -1,32 +1,32 @@
 h1 {
-  font-family: sans-serif;
+    font-family: sans-serif;
 }
 
 p {
-  font-weight: 600;
-  font-size: 3em;
+    font-weight: 600;
+    font-size: 3em;
 }
 
 body {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 ul {
-  font-size: 2em;
-  font-style: italic;
-  line-height: 2;
-  text-align: center;
-  text-decoration: underline;
+    font-size: 2em;
+    font-style: italic;
+    line-height: 2;
+    text-align: center;
+    text-decoration: underline;
 }
 
 .amarelo {
-  color: yellow;
+    color: yellow;
 }
 
 .vermelho {
-  color: red;
+    color: red;
 }
 
 .marrom {
-  color: brown;
+    color: brown;
 }

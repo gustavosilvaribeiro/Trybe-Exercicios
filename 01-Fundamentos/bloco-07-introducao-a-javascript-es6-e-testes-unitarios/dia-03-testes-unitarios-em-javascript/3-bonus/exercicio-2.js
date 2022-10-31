@@ -1,6 +1,6 @@
-const assert = require("assert");
+const assert = require('assert');
 // escreva a função factorial aqui
-const factorial = (num) => (num <= 1 ? 1 : factorial(num - 1) * num);
+const factorial = num => num <= 1 ? 1 : factorial(num - 1) * num;
 
 const in1 = 5;
 const exp1 = 120;

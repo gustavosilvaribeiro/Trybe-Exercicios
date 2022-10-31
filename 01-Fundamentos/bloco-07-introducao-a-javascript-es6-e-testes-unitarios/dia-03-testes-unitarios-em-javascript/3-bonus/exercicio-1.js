@@ -1,4 +1,4 @@
-const coins = [200, 100, 50, 20, 10, 5, 2, 1];
+const coins = [200 , 100 , 50 , 20 , 10 , 5 , 2, 1];
 
 function getChange(payable, paid) {
   const coins = [200, 100, 50, 20, 10, 5, 2, 1];
@@ -6,7 +6,7 @@ function getChange(payable, paid) {
   const { length } = coins;
   let remaining = paid - payable;
 
-  if (remaining < 0) throw new Error("paid value is not enough");
+  if (remaining < 0) throw new Error('paid value is not enough');
 
   // escreva seu código aqui...
   for (let index = 0; remaining > 0; ) {
@@ -22,7 +22,7 @@ function getChange(payable, paid) {
   return change;
 }
 
-const assert = require("assert");
+const assert = require('assert');
 
 let result = getChange(1, 1); // no change/coins just an empty array
 let expected = [];
@@ -40,6 +40,4 @@ result = getChange(12, 400); // expect an array containing [200, 100, 50, 20, 10
 expected = [200, 100, 50, 20, 10, 5, 2, 1];
 assert.deepStrictEqual(result, expected);
 
-assert.throws(() => {
-  getChange(100, 10);
-}, /^Error: paid value is not enough$/);
+assert.throws(() => { getChange(100, 10); }, /^Error: paid value is not enough$/);

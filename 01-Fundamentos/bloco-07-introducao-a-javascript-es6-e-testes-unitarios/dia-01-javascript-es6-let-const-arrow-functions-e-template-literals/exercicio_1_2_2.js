@@ -1,6 +1,6 @@
 const oddsAndEvens = [13, 3, 4, 10, 7, 2];
 
-const sortArray = (arr) => {
+const sortArray = arr => {
   for (let index = 0; index < arr.length; index += 1) {
     for (let innerIndex = 0; innerIndex < arr.length - index; innerIndex += 1) {
       if (arr[innerIndex] > arr[innerIndex + 1]) {
@@ -10,12 +10,8 @@ const sortArray = (arr) => {
       }
     }
   }
-};
+}
 
 sortArray(oddsAndEvens);
 
-console.log(
-  `Os números ${oddsAndEvens.join(
-    ","
-  )} se encontram ordenados de forma crescente!`
-);
+console.log(`Os números ${oddsAndEvens.join(',')} se encontram ordenados de forma crescente!`);

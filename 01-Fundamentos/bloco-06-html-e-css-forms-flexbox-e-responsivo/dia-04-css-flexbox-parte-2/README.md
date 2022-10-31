@@ -6,11 +6,11 @@ Para os exercícios a seguir, utilize este [playground](https://the-echoplex.net
 
 Como os exercícios serão feitos na própria plataforma, crie um diretório em seu repositório para o site número 1 (problema do sapo) e outro para o site número 2 (problema das torres). Salve o CSS que você criar na plataforma colocando o número do exercício como o nome do arquivo, como nos exemplos abaixo:
 
-- Para o exercício número 15 do site número 1, o CSS deve ser salvo em exercises/6.4/1/15.css;
+* Para o exercício número 15 do site número 1, o CSS deve ser salvo em exercises/6.4/1/15.css;
 
-- Para o exercício número 10 do site número 2, o CSS deve ser salvo em exercises/6.4/2/10.css;
+* Para o exercício número 10 do site número 2, o CSS deve ser salvo em exercises/6.4/2/10.css;
 
-- Para o exercício número 11 do site número 2, o CSS deve ser salvo em exercises/6.4/2/11.css.
+* Para o exercício número 11 do site número 2, o CSS deve ser salvo em exercises/6.4/2/11.css.
 
 1. Faça os exercícios de 14 a 24 neste [site](https://flexboxfroggy.com/). O seu objetivo é colocar os sapos em cima de suas respectivas folhas.
 

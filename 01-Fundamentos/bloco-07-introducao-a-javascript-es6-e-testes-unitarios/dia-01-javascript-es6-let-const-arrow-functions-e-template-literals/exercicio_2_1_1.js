@@ -5,8 +5,8 @@ const fat = (num) => {
     sum *= factor;
   }
   return sum;
-};
+}
 
-for (let i = 0; i < 6; i++) {
+for(let i = 0; i < 6; i++) {
   console.log(i, fat(i));
 }
