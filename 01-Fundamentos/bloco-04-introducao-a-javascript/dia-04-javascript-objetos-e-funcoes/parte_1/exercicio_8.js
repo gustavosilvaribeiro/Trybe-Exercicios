@@ -16,4 +16,4 @@ let leitor = {
     ],
   };
   //Para conseguir determinar a quantidade de objetos salvos no array livrosFavoritos utilizaremos o método length.
-  console.log(leitor.nome + ' tem ' + leitor.livrosFavoritos.length + ' livros favoritos.');
+  console.log(`${leitor.nome} tem ${leitor.livrosFavoritos.length} livros favoritos.`);

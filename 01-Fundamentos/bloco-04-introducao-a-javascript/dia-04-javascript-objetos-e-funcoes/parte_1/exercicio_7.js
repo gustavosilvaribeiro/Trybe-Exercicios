@@ -17,4 +17,5 @@ let leitor = {
         autor: 'JK Rowling',
         editora: 'Rocco',
       }
-  )
+  );
+  console.log(leitor.livrosFavoritos); 

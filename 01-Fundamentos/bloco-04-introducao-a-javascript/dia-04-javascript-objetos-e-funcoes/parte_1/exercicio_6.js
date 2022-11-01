@@ -11,4 +11,4 @@ let leitor = {
     ],
   };
   //Dentro do console.log concatene as strings com o + e acesse os valores do array livrosFavoritos no índice 0.
-  console.log(`O livro favorito de ${leitor.nome} ${leitor.sobrenome} se chama'${leitor.livrosFavoritos[0].titulo}'`); //“O livro favorito de Julia Pessoa se chama ‘O Pior Dia de Todos’”.
+  console.log(`O livro favorito de ${leitor.nome} ${leitor.sobrenome} se chama '${leitor.livrosFavoritos[0].titulo}'`); //“O livro favorito de Julia Pessoa se chama ‘O Pior Dia de Todos’”.
