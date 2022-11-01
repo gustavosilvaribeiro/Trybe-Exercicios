@@ -57,6 +57,37 @@ Namorada do personagem principal nos quadrinhos do Pato Donald e O último MacPa
 Ambos recorrentes // Atenção para essa última linha!
 ```
 
+## Leitura de Objetos
+
+Usando o objeto abaixo, faça os exercícios a seguir:
+
+```javascript
+let leitor = {
+  nome: 'Julia',
+  sobrenome: 'Pessoa',
+  idade: 21,
+  livrosFavoritos: [
+    {
+      titulo: 'O Pior Dia de Todos',
+      autor: 'Daniela Kopsch',
+      editora: 'Tordesilhas',
+    },
+  ],
+};
+```
+- Acesse as chaves nome, sobrenome e titulo, que está dentro da chave livrosFavoritos, e faça um console.log no seguinte formato: “O livro favorito de Julia Pessoa se chama ‘O Pior Dia de Todos’”.
+
+- Adicione um novo livro favorito na chave livrosFavoritos, que é um array. Atribua a essa chave um objeto contendo as seguintes informações:
+```javascript
+{
+  titulo: 'Harry Potter e o Prisioneiro de Azkaban',
+  autor: 'JK Rowling',
+  editora: 'Rocco',
+}
+```
+- Acesse as chaves nome e livrosFavoritos e faça um console.log no seguinte formato: “Julia tem <quantidade> livros favoritos”, onde “<quantidade>” é um número gerado automaticamente pelo seu código.
+
+
 ## Parte II - Funções
 
 * Agora vamos fazer um exercício que vai deixar claro como funções com responsabilidades bem definidas deixam o código mais bem escrito.
