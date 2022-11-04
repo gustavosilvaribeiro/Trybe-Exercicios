@@ -59,7 +59,7 @@ Ambos recorrentes // Atenção para essa última linha!
 ___
 ## Leitura de Objetos
 
-Usando o objeto abaixo, faça os exercícios a seguir:
+  1. Usando o objeto abaixo, faça os exercícios a seguir:
 
 ```javascript
 let leitor = {
@@ -97,7 +97,7 @@ A manipulação de arrays pode ser complexa em alguns momentos e, por isso, o Ja
 
 Spoiler-alert: para os exercícios do dia, os métodos `split`, `join` e `reverse` podem ser muito úteis.
 
-- Crie uma função que receba uma `string` e retorne `true` se for um palíndromo, ou `false`, se não for.
+01. Crie uma função que receba uma `string` e retorne `true` se for um palíndromo, ou `false`, se não for.
 
 - Exemplo de palíndromo: arara
 
@@ -106,19 +106,19 @@ Spoiler-alert: para os exercícios do dia, os métodos `split`, `join` e `revers
 - `verificaPalindrome('desenvolvimento')`
   -  Retorno esperado: `false`
 
-- Crie uma função que receba um `array` de inteiros e retorne o índice do maior valor.
+2. Crie uma função que receba um `array` de inteiros e retorne o índice do maior valor.
 
   - Array de teste: `[2, 3, 6, 7, 10, 1];`.
 
   - Valor esperado no retorno da função: `4`.
 
-- Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
+3. Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
 
   - Array de teste: `[2, 4, 6, 7, 10, 0, -3];`.
 
   - Valor esperado no retorno da função: 6.
 
-- Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
+4. Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
 
   - Array de teste: `['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];`.
 
@@ -186,7 +186,7 @@ Dicas:</b>
 
 Exercício 2 </b>
 
-- Crie uma função chamada `arrayOfNumbers` que receberá a variável vector como parâmetro.
+- Crie uma função chamada `arrayOfNumbers` que receberá a variável `vector como parâmetro.
 
 - Através de um loop `for`, percorra essa variável, busque os números pares e os adicione a um novo array, que deverá ser retornado ao final pela função.
 
@@ -198,7 +198,7 @@ let vector = [[1, 2], [3,4,5,6], [7,8,9,10]];
 A partir do array de frutas `basket`, retorne um objeto que contenha o nome da fruta como chave e a quantidade de vezes que ela aparece no array como valor. 
 Por exemplo, o array [‘Melancia’, ‘Abacate’, ‘Melancia’, ‘Melancia’, ‘Uva’], deverá retornar { Melancia: 3, Abacate: 1, Uva: 1 } quando passado como argumento para a função.
 
-Em seguida, imprima esse resultado na tela com uma mensagem no seguinte formato: Sua cesta possui: x Melancias, x Abacates...
+Em seguida, imprima esse resultado na tela com uma mensagem no seguinte formato: `Sua cesta possui: x Melancias, x Abacates...`
 
 ~~~javascript
 const basket = [
@@ -257,6 +257,6 @@ let moradores = {
   ],
 };
 ~~~
-- Acesse as chaves nome, sobrenome, andar e apartamento do último morador do blocoDois e faça um console.log no seguinte formato: “O morador do bloco 2 de nome Zoey Brooks mora no 1° andar, apartamento 101”.
+- Acesse as chaves `nome`, `sobrenome`, `andar` e `apartamento` do último morador do `blocoDois` e faça um `console.log` no seguinte formato: “O morador do bloco 2 de nome Zoey Brooks mora no 1° andar, apartamento 101”.
 
-- Utilize o for para imprimir o nome completo de todos os moradores do bloco 1, acessando suas chaves nome e sobrenome. Depois faça o mesmo para os moradores do bloco 2.
+- Utilize o `for` para imprimir o nome completo de todos os moradores do bloco 1, acessando suas chaves `nome` e `sobrenome`. Depois faça o mesmo para os moradores do bloco 2.

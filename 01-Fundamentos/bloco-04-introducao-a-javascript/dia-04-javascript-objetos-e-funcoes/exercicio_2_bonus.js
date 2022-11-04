@@ -1,17 +1,20 @@
-// Link: https://www.codewars.com/kata/5effa412233ac3002a9e471d/javascript
+const vector = [[1, 2], [3, 4, 5, 6], [7, 8, 9, 10]];
 
-function add(num1, num2) {
-  let a = String(num1);
-  let b = String(num2);
-  let len = a.length > b.length ? a.length : b.length;
-  a = a.padStart(len, '0');
-  b = b.padStart(len, '0');
-  let result = [];
-  for (let i = 1; i <= len; i++) {
-    let soma = Number(a[len - i]) + Number(b[len - i]);
-    result.unshift(soma);
+function arrayOfNumbers(vector) {
+  const result = [];
+
+  for (let index = 0; index < vector.length; index += 1) {
+    const numbers = vector[index];
+    for (let indexSub = 0; indexSub < numbers.length; indexSub += 1) {
+      const current = numbers[indexSub];
+
+      if ((current % 2) === 0) {
+        result.push(current);
+      } 
+    }
   }
-  return Number(result.join(''));
+
+  return result;
 }
 
-console.log(add(10, 9999));
+console.log(arrayOfNumbers(vector)); // [2, 4, 6, 8, 10]
