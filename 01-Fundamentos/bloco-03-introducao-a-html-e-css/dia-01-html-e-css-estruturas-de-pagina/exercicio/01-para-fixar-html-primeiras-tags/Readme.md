@@ -1,6 +1,9 @@
-# Para fixar
-in
-dex.html
+# HTML - Primeiras tags
+Para executar o seu código enquanto o desenvolve, utilize a extensão `Live Server`.
+
+
+## Para fixar
+`index.html`
 
 ~~~html
 <!DOCTYPE html>
